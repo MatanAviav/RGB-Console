@@ -1,0 +1,14 @@
+{
+  "name": "ColoredConsole",
+  "version": "1.0.0",
+  "author": "Matan Aviav <matanaviav.npmjs@gmail.com> (https://github.com/MatanAviav)",
+  "license" : "LICENSE IN LICENSE.md",
+  "description": "Style your Node.js Server console (terminal) with text colors, background colors and symbols.",
+  "homepage": "https://github.com/MatanAviav/ColoredConsole",
+  "repository": "https://github.com/MatanAviav/ColoredConsole",
+  "main": "./ColoredConsole.js",
+  "bin": {
+    "ColoredConsole": "./bin/cli.js"
+  },
+  "keywords": ["console", "terminal", "nodejs", "express", "colors", "colored"]
+}
