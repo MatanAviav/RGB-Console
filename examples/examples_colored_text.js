@@ -1,4 +1,4 @@
-const cc = require('../ColoredConsole');
+const cc = require('../rgbconsole');
 
 cc.log('')
 cc.title('Colored Text Examples');

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const cc = require('../ColoredConsole');
+const cc = require('../rgbconsole');
 const process = require('process');
 const path = require('path');
 const execSync = require('child_process').execSync;

@@ -1,15 +1,15 @@
-# **Colored Console**
+# **RGB Console for Node.js Server**
 
 Author: Matan Aviav.<br />
 E-mail: matanaviav.npmjs@gmail.com<br />
 Style your **Node.js Server** console (terminal) with text colors, background colors and symbols.
 <br /><br />
-Example (Default terminal of WebStorm):<br />
+Example (Terminal of WebStorm):<br />
 >![img_5.png](images2/img_5.png)
 
 And the code for the above output:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 
 cc.log('A plain text...')
 cc.title('This is a title')
@@ -30,21 +30,21 @@ cc.underline("This is an underlined bolded text", cc.TEXT_COLORS.MAGENTA, true)
 ### 1. Install the module:
 First, install the module in your project folder with the following command:
 ```
-npm install ColoredConsole
+npm install rgb-console
 ```
 <br />
 
 ### 2. Import the module:
 First, import the module into a variable with `require()` function:
 ```
-const cc = require('ColoredConsole')
+const cc = require('rgb-console')
 ```
 <br />
 
 ### 3. Use it:
 Use the different functions the variable has. Examples:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 
 cc.log('A plain text...')
 cc.title('This is a title')
@@ -64,7 +64,7 @@ cc.redBold('This is a red bolded text');
 
 ### 1. Plain Text (no style):
 For plain text use `log(...)` function.<br />
-`ColoredConsole.log()` function is the same function as `console.log(...)` of JavaScript.
+`RGBConsole.log()` function is the same function as `console.log(...)` of JavaScript.
 <br /><br />
 
 ### 2. Title Style:
@@ -77,7 +77,7 @@ The `title(...)` function will output a message which has:
 
 Example:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 cc.title('This is a title');
 ```
 Output:
@@ -87,7 +87,7 @@ Output:
 <br /><br />
 
 ### 3. Colored Text:
-Note: you can run `ColoredConsole run text examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run text examples` for a quick tutorial.<br />
 For colored text use functions with `text` prefix.<br />
 For example, calling `textBlue('Some Text')` will output:
 >![img_1.png](images/img_1.png)
@@ -123,7 +123,7 @@ Preview of the colors:<br />
 <br />
 
 ### 4. Colored Bolded Text:
-Note: you can run `ColoredConsole run bold examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run bold examples` for a quick tutorial.<br />
 For colored bolded text use functions with `bold` prefix.<br />
 For example, calling `boldMagenta('Some Text')` will output:
 >![img_3.png](images/img_3.png)
@@ -155,7 +155,7 @@ magentaBold("Some Text")
 You can also use `bold(...)` function directly with the following parameters:
 ```
     (1) text: string - A Text
-    (2) text_color: string - A Text Color from ColoredConsole.TEXT_COLORS object:
+    (2) text_color: string - A Text Color from RGBConsole.TEXT_COLORS object:
         BLACK
         BLUE
         CYAN
@@ -168,7 +168,7 @@ You can also use `bold(...)` function directly with the following parameters:
 
 Example:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 cc.bold('Some Text', cc.TEXT_COLORS.MAGENTA);
 ```
 Output:<br />
@@ -182,7 +182,7 @@ Preview of the bolded text colors:<br />
 
 
 ### 5. Colored Underlined Text:
-Note: you can run `ColoredConsole run underline examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run underline examples` for a quick tutorial.<br />
 For colored underlined text use functions with `underline` prefix.<br />
 For example, calling `underlineYellow('Some Text')` will output:
 >![img.png](images2/img.png)
@@ -218,7 +218,7 @@ magentaUnderline("Some Text")
 
 Example:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 cc.underlineGreen('Some Text');
 cc.blueUnderline('Some Text', true);
 ```
@@ -230,7 +230,7 @@ Output:<br />
 You can also use `underline(...)` function directly with the following parameters:
 ```
     (1) text: string - A Text
-    (2) text_color: string - A Text Color from ColoredConsole.TEXT_COLORS object:
+    (2) text_color: string - A Text Color from RGBConsole.TEXT_COLORS object:
         BLACK
         BLUE
         CYAN
@@ -244,7 +244,7 @@ You can also use `underline(...)` function directly with the following parameter
 
 Example:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 cc.underline('Some Text', cc.TEXT_COLORS.MAGENTA);
 ```
 Output:<br />
@@ -258,7 +258,7 @@ Preview of the underlined text colors:<br />
 
 
 ### 6. Colored Background:
-Note: you can run `ColoredConsole run background examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run background examples` for a quick tutorial.<br />
 For colored background use functions with `BG` prefix.<br />
 For example, calling `BGRed('Some Text')` will output:
 >![img_5.png](images/img_5.png)
@@ -288,7 +288,7 @@ magentaBG("Some Text")
 You can also use `bg(...)` function directly with the following parameters:
 ```
     (1) text: string - A Text
-    (2) bg_color: string - A Background Color from ColoredConsole.BG_COLORS object:
+    (2) bg_color: string - A Background Color from RGBConsole.BG_COLORS object:
         WHITE
         BLUE
         RED
@@ -296,12 +296,12 @@ You can also use `bg(...)` function directly with the following parameters:
         YELLOW
         CYAN
         MAGENTA
-    (3) text_color?: string - A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+    (3) text_color?: string - A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
 ```
 
 Example:
 ```
-const cc = require('ColoredConsole');
+const cc = require('rgb-console');
 cc.bg('Some Text', cc.BG_COLORS.CYAN);
 ```
 Output:<br />
@@ -314,7 +314,7 @@ Preview of the colors:<br />
 <br />
 
 ### 7. Error/Negative Messages:
-Note: you can run `ColoredConsole run error examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run error examples` for a quick tutorial.<br />
 For Error/Negative messages use `error(...)`, `bad(...)` or `fail(...)` functions.<br />
 For example, calling `error('Some Text')` will output:
 >![img_7.png](images/img_7.png)
@@ -364,7 +364,7 @@ The `bad(...)` and `fail(...)` functions are the same as `error(...)` function b
 <br />
 
 ### 8. Success/Positive Messages:
-Note: you can run `ColoredConsole run ok examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run ok examples` for a quick tutorial.<br />
 For Success/Positive messages use `ok(...)`, `success(...)` or `good(...)` functions.<br />
 For example, calling `ok('Some Text')` will output:
 >![img_12.png](images/img_12.png)
@@ -413,7 +413,7 @@ The `success(...)` and `good(...)` functions are the same as `ok(...)` function 
 <br />
 
 ### 9. Warning Messages:
-Note: you can run `ColoredConsole run warn examples` for a quick tutorial.<br />
+Note: you can run `RGBConsole run warn examples` for a quick tutorial.<br />
 For Warning messages use `warn(...)` function.<br />
 For example, calling `warn('Some Text')` will output:
 >![img_18.png](images/img_18.png)

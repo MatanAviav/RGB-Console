@@ -1,10 +1,10 @@
 /**
  * @author Matan Aviav (https://github.com/MatanAviav)
- * @description Style your Node.js Server console (terminal) with text colors, background colors and symbols. {@link https://github.com/MatanAviav/ColoredConsole|Click for Documentation}
+ * @description Style your Node.js Server console (terminal) with text colors, background colors and symbols. {@link https://github.com/MatanAviav/RGB-Console|Click for Documentation}
  * @property {Object}  TEXT_COLORS              - An Object With Text Colors
  * @property {Object}  BG_COLORS                - An Object With Background Colors
  */
-class ColoredConsole
+class RGBConsole
 {
     /**
      * @static
@@ -78,7 +78,7 @@ class ColoredConsole
      * @function
      * @description Log an UNDERLINED text into the console with selected text_color
      * @param  {string} text A text to log into the console
-     * @param {string} text_color A color from ColoredConsole.TEXT_COLORS object
+     * @param {string} text_color A color from RGBConsole.TEXT_COLORS object
      * @param {boolean} [isBold] Make the text bolded (Optional). Default: false
      * @static
      */
@@ -188,7 +188,7 @@ class ColoredConsole
      * @function
      * @description Log a BOLD text into the console with selected text_color
      * @param  {string} text A text to log into the console
-     * @param {string} text_color A color from ColoredConsole.TEXT_COLORS object
+     * @param {string} text_color A color from RGBConsole.TEXT_COLORS object
      * @static
      */
     static bold = (text, text_color) => {
@@ -377,8 +377,8 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with selected background color and text color (optional)
      * @param  {string} text A text to log into the console
-     * @param  {string} bg_color A background color from ColoredConsole.BG_COLORS object
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param  {string} bg_color A background color from RGBConsole.BG_COLORS object
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static bg = (text, bg_color, text_color) => {
@@ -389,7 +389,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with WHITE background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static whiteBG = (text, text_color) => {
@@ -401,7 +401,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with RED background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static redBG = (text, text_color) => {
@@ -413,7 +413,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with GREEN background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static greenBG = (text, text_color) => {
@@ -425,7 +425,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with YELLOW background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static yellowBG = (text, text_color) => {
@@ -437,7 +437,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with BLUE background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static blueBG = (text, text_color) => {
@@ -449,7 +449,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with MAGENTA background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static magentaBG = (text, text_color) => {
@@ -461,7 +461,7 @@ class ColoredConsole
      * @function
      * @description Log a text into the console, with CYAN background color
      * @param  {string} text A text to log into the console
-     * @param {string} [text_color] A text color from ColoredConsole.TEXT_COLORS object (Optional). Default text color: BLACK
+     * @param {string} [text_color] A text color from RGBConsole.TEXT_COLORS object (Optional). Default text color: BLACK
      * @static
      */
     static cyanBG = (text, text_color) => {
@@ -633,4 +633,4 @@ class ColoredConsole
         this.error(text, options);
     }
 }
-module.exports = ColoredConsole;
+module.exports = RGBConsole;
