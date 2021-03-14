@@ -1,6 +1,6 @@
 {
   "name": "rgb-console",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Matan Aviav <matanaviav.npmjs@gmail.com> (https://github.com/MatanAviav)",
   "license" : "LICENSE IN LICENSE.md",
   "description": "Style your Node.js Server console (terminal) with text colors, background colors and symbols.",
@@ -8,7 +8,7 @@
   "repository": "https://github.com/MatanAviav/RGB-Console",
   "main": "rgbconsole.js",
   "bin": {
-    "RGBC": "./bin/cli.js"
+    "RGBConsole": "./bin/cli.js"
   },
   "keywords": ["console", "terminal", "nodejs", "express", "colors", "colored", "rgb", "cli"]
 }

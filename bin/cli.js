@@ -4,29 +4,37 @@ const cc = require('../rgbconsole');
 const process = require('process');
 const path = require('path');
 const execSync = require('child_process').execSync;
-let file = path.join(__dirname, '../examples/');
+let file = path.join(__dirname, '../examples');
 
-if(process.argv.includes("run text examples")) {
-    execSync('node ' + path.join(file, 'examples_colored_text.js'));
+let cmd = "", result = "";
+for(let i=2; i<process.argv.length; i++) {
+    cmd += process.argv[i] + " ";
 }
-else if(process.argv.includes("run bold examples")) {
-    execSync('node ' + path.join(file, 'examples_bold_text.js'));
+cmd = cmd.trim();
+if(cmd == "run text examples") {
+    result = execSync('node ' + path.join(file, 'examples_colored_text.js'));
 }
-else if(process.argv.includes("run underline examples")) {
-    execSync('node ' + path.join(file, 'examples_underline_text.js'));
+else if(cmd == "run bold examples") {
+    result = execSync('node ' + path.join(file, 'examples_bold_text.js'));
 }
-else if(process.argv.includes("run background examples")) {
-    execSync('node ' + path.join(file, 'examples_bg.js'));
+else if(cmd == "run underline examples") {
+    result = execSync('node ' + path.join(file, 'examples_underline_text.js'));
 }
-else if(process.argv.includes("run error examples")) {
-    execSync('node ' + path.join(file, 'examples_error.js'));
+else if(cmd == "run background examples") {
+    result = execSync('node ' + path.join(file, 'examples_bg.js'));
 }
-else if(process.argv.includes("run ok examples")) {
-    execSync('node ' + path.join(file, 'examples_ok.js'));
+else if(cmd == "run error examples") {
+    result = execSync('node ' + path.join(file, 'examples_error.js'));
 }
-else if(process.argv.includes("run warn examples")) {
-    execSync('node ' + path.join(file, 'examples_warn.js'));
+else if(cmd == "run ok examples") {
+    result = execSync('node ' + path.join(file, 'examples_ok.js'));
+}
+else if(cmd == "run warn examples") {
+    result = execSync('node ' + path.join(file, 'examples_warn.js'));
 }
 else {
     cc.error("command not found");
+}
+if( result != "" ) {
+    console.log(result.toString());
 }
